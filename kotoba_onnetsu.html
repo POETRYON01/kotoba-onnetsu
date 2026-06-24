@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>言葉温熱 | POETRY ON presents</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#fafafa; color:#2a2520; font-family:'Noto Serif JP',serif; font-weight:300; line-height:1.8; }
+.hero { display:flex; flex-direction:column; align-items:center; text-align:center; padding:48px 24px 48px; border-bottom:1px solid #ede9e4; }
+.hero-eyebrow { font-family:'Noto Sans JP',sans-serif; font-size:11px; letter-spacing:0.35em; color:#c0b8b0; margin-bottom:16px; font-weight:300; }
+.title-block { display:inline-flex; flex-direction:column; align-items:center; margin-bottom:28px; }
+.hero-title { font-family:'Cormorant Garamond',serif; font-size:72px; font-weight:300; letter-spacing:0.15em; color:#2a2520; line-height:1; white-space:nowrap; margin-bottom:8px; }
+.hero-reading { font-family:'Noto Sans JP',sans-serif; font-size:15px; font-weight:300; color:#c87560; letter-spacing:0.52em; white-space:nowrap; }
+.hero-divider { width:1px; height:32px; background:#e0ddd8; margin:0 auto 28px; }
+.hero-catch { font-size:14px; color:#666; line-height:2.6; margin-bottom:36px; letter-spacing:0.04em; }
+.hero-catch em { font-style:normal; color:#2a2520; }
+.hero-meta { display:flex; gap:40px; justify-content:center; flex-wrap:wrap; }
+.hero-meta-item { text-align:center; }
+.hero-meta-label { font-family:'Noto Sans JP',sans-serif; font-size:10px; letter-spacing:0.25em; color:#ccc; margin-bottom:6px; font-weight:300; }
+.hero-meta-value { font-family:'Noto Sans JP',sans-serif; font-size:18px; color:#2a2520; font-weight:400; }
+.section { max-width:680px; margin:0 auto; padding:48px 24px; border-bottom:1px solid #ede9e4; }
+.section-label { font-family:'Noto Sans JP',sans-serif; font-size:10px; letter-spacing:0.4em; color:#c87560; margin-bottom:20px; font-weight:300; }
+.section-title { font-size:17px; color:#2a2520; letter-spacing:0.05em; margin-bottom:20px; font-weight:400; }
+.overview-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1px; background:#ede9e4; border:1px solid #ede9e4; }
+.overview-cell { background:#fafafa; padding:18px; }
+.overview-cell-label { font-family:'Noto Sans JP',sans-serif; font-size:10px; letter-spacing:0.2em; color:#ccc; margin-bottom:6px; font-weight:300; }
+.overview-cell-value { font-size:14px; color:#2a2520; line-height:1.7; }
+.merit-list { display:flex; flex-direction:column; gap:1px; background:#ede9e4; border:1px solid #ede9e4; }
+.merit-item { background:#fafafa; padding:24px 20px; display:grid; grid-template-columns:24px 1fr; gap:14px; }
+.merit-num { font-family:'Cormorant Garamond',serif; font-size:20px; color:#c87560; font-weight:300; line-height:1; padding-top:2px; }
+.merit-title { font-size:14px; color:#2a2520; margin-bottom:8px; letter-spacing:0.04em; font-weight:400; }
+.merit-body { font-size:13px; color:#999; line-height:2.2; }
+table { width:100%; border-collapse:collapse; }
+thead tr { border-bottom:1px solid #e0ddd8; }
+th { font-family:'Noto Sans JP',sans-serif; font-size:10px; letter-spacing:0.2em; color:#ccc; font-weight:300; padding:10px 8px; text-align:left; }
+td { font-size:13px; color:#555; padding:14px 8px; border-bottom:1px solid #f0ede8; vertical-align:middle; }
+td.time { color:#c87560; font-size:12px; white-space:nowrap; font-family:'Noto Sans JP',sans-serif; font-weight:300; }
+td.no { color:#ccc; font-size:11px; width:24px; font-family:'Noto Sans JP',sans-serif; }
+tr.adj-row td { color:#ccc; }
+.condition-row { display:flex; gap:24px; border-bottom:1px solid #f0ede8; padding:16px 0; align-items:baseline; }
+.condition-row:last-child { border-bottom:none; }
+.condition-key { font-family:'Noto Sans JP',sans-serif; font-size:11px; letter-spacing:0.15em; color:#bbb; min-width:90px; flex-shrink:0; font-weight:300; }
+.condition-val { font-size:13px; color:#666; line-height:1.9; }
+.cta { max-width:680px; margin:0 auto; padding:56px 24px; text-align:center; }
+.cta-title { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:300; letter-spacing:0.1em; color:#2a2520; margin-bottom:12px; }
+.cta-body { font-size:13px; color:#aaa; line-height:2.4; margin-bottom:32px; }
+.cta-btn { display:inline-block; border:1px solid #c87560; color:#c87560; padding:12px 44px; font-size:10px; letter-spacing:0.4em; cursor:pointer; background:transparent; font-family:'Noto Sans JP',sans-serif; font-weight:300; text-decoration:none; }
+footer { text-align:center; padding:28px 24px; border-top:1px solid #ede9e4; font-family:'Noto Sans JP',sans-serif; font-size:10px; letter-spacing:0.3em; color:#ccc; font-weight:300; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <p class="hero-eyebrow">POETRY ON presents</p>
+  <div class="title-block">
+    <span class="hero-title">言葉温熱</span>
+    <span class="hero-reading">KOTOBA ONNETSU</span>
+  </div>
+  <div class="hero-divider"></div>
+  <p class="hero-catch">
+    言葉に重心を置くグループが、本物の音響で熱を届ける場所。<br>
+    <em>一夜限りのライブを、検索され続けるコンテンツに変える。</em>
+  </p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <p class="hero-meta-label">DATE</p>
+      <p class="hero-meta-value">2026.11.01 SUN</p>
+    </div>
+    <div class="hero-meta-item">
+      <p class="hero-meta-label">VENUE</p>
+      <p class="hero-meta-value">KMAパラダイスホール</p>
+    </div>
+    <div class="hero-meta-item">
+      <p class="hero-meta-label">CAPACITY</p>
+      <p class="hero-meta-value">300</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <p class="section-label">Overview</p>
+  <div class="overview-grid">
+    <div class="overview-cell">
+      <p class="overview-cell-label">日時</p>
+      <p class="overview-cell-value">2026年11月1日（日）</p>
+    </div>
+    <div class="overview-cell">
+      <p class="overview-cell-label">会場</p>
+      <p class="overview-cell-value">KMAパラダイスホール<br><span style="font-size:12px;color:#bbb;">旧フォーライフライブホール</span></p>
+    </div>
+    <div class="overview-cell">
+      <p class="overview-cell-label">アクセス</p>
+      <p class="overview-cell-value">池尻大橋駅 徒歩7分<br>三軒茶屋駅 徒歩9分</p>
+    </div>
+    <div class="overview-cell">
+      <p class="overview-cell-label">キャパシティ</p>
+      <p class="overview-cell-value">300人</p>
+    </div>
+    <div class="overview-cell">
+      <p class="overview-cell-label">主催</p>
+      <p class="overview-cell-value">POETRY ON</p>
+    </div>
+    <div class="overview-cell">
+      <p class="overview-cell-label">出演</p>
+      <p class="overview-cell-value">約7組（予定）</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <p class="section-label">Merit</p>
+  <p class="section-title">出演メリット</p>
+  <div class="merit-list">
+    <div class="merit-item">
+      <p class="merit-num">I</p>
+      <div>
+        <p class="merit-title">都内有数の音響設備</p>
+        <p class="merit-body">天井高8m、L-Acoustics A15を中心としたシステムを備えています。照明も含め、パフォーマンスをしっかり届けられる環境です。</p>
+      </div>
+    </div>
+    <div class="merit-item">
+      <p class="merit-num">II</p>
+      <div>
+        <p class="merit-title">参加するだけでWEBコンテンツ化</p>
+        <p class="merit-body">POETRY ONのライター・フォトグラファーが当日の取材を行い、WEBメディアに掲載します。開催後も露出が続くため、ライブが検索され続けるコンテンツに変化します。</p>
+      </div>
+    </div>
+    <div class="merit-item">
+      <p class="merit-num">III</p>
+      <div>
+        <p class="merit-title">出演グループのコンセプト統一</p>
+        <p class="merit-body">エモーショナルな気質を持つグループのみをキャスティング。顧客の属性も揃いやすく、盛り上がりとともに新たな出会いを創出します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <p class="section-label">Timetable</p>
+  <table>
+    <thead>
+      <tr><th>No.</th><th>ライブ</th><th>出演者</th><th>特典会</th><th>ブース</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="no">1</td><td class="time">16:50 〜 17:20</td><td>—</td><td class="time">17:25 〜 18:25</td><td>A</td></tr>
+      <tr><td class="no">2</td><td class="time">17:20 〜 17:50</td><td>—</td><td class="time">17:55 〜 18:55</td><td>B</td></tr>
+      <tr><td class="no">3</td><td class="time">17:50 〜 18:20</td><td>—</td><td class="time">18:25 〜 19:25</td><td>C</td></tr>
+      <tr class="adj-row"><td class="no">-</td><td class="time">18:20 〜 18:30</td><td>【調整】</td><td class="time">18:35 〜 19:35</td><td>-</td></tr>
+      <tr><td class="no">4</td><td class="time">18:30 〜 19:00</td><td>—</td><td class="time">19:05 〜 20:05</td><td>D</td></tr>
+      <tr><td class="no">5</td><td class="time">19:00 〜 19:30</td><td>—</td><td class="time">19:35 〜 20:35</td><td>A</td></tr>
+      <tr><td class="no">6</td><td class="time">19:30 〜 20:00</td><td>—</td><td class="time">20:05 〜 21:05</td><td>B</td></tr>
+      <tr><td class="no">7</td><td class="time">20:00 〜 20:30</td><td>—</td><td class="time">20:35 〜 21:35</td><td>C</td></tr>
+    </tbody>
+  </table>
+  <p style="font-family:'Noto Sans JP',sans-serif;font-size:12px;color:#aaa;margin-top:16px;letter-spacing:0.1em;font-weight:300;">OPEN / START　16:30 / 16:50</p>
+</section>
+
+<section class="section">
+  <p class="section-label">Ticket</p>
+  <p style="font-size:13px;color:#ccc;padding:12px 0;letter-spacing:0.1em;">調整中</p>
+</section>
+
+<section class="section">
+  <p class="section-label">Condition</p>
+  <p class="section-title">出演条件</p>
+  <div class="condition-row">
+    <p class="condition-key">グループ</p>
+    <p class="condition-val">エモーショナルな気質のあるグループ・ユニット</p>
+  </div>
+  <div class="condition-row">
+    <p class="condition-key">内容</p>
+    <p class="condition-val">ライブ30分 + 裏側取材 + 特典会60分</p>
+  </div>
+  <div class="condition-row">
+    <p class="condition-key">掲載許諾</p>
+    <p class="condition-val">写真・テキストの編集・掲載にご同意いただけること<br><span style="font-size:12px;color:#bbb;">※個別相談可</span></p>
+  </div>
+</section>
+
+<div class="cta">
+  <p class="cta-title">出演のご相談</p>
+  <p class="cta-body">まずはお気軽にご連絡ください。<br>編成・時間割はご相談のうえ調整します。</p>
+  <a class="cta-btn">CONTACT</a>
+</div>
+
+<footer>POETRY ON &nbsp;/&nbsp; KOTOBA ONNETSU &nbsp;/&nbsp; 2026.11.01</footer>
+
+</body>
+</html>

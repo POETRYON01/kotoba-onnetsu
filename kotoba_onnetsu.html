@@ -12,7 +12,7 @@ body { background:#fafafa; color:#2a2520; font-family:'Noto Serif JP',serif; fon
 .hero-eyebrow { font-family:'Noto Sans JP',sans-serif; font-size:11px; letter-spacing:0.35em; color:#c0b8b0; margin-bottom:16px; font-weight:300; }
 .title-block { display:inline-flex; flex-direction:column; align-items:center; margin-bottom:28px; }
 .hero-title { font-family:'Cormorant Garamond',serif; font-size:72px; font-weight:300; letter-spacing:0.15em; color:#2a2520; line-height:1; white-space:nowrap; margin-bottom:8px; }
-.hero-reading { font-family:'Noto Sans JP',sans-serif; font-size:15px; font-weight:300; color:#c87560; letter-spacing:0.52em; white-space:nowrap; }
+.hero-reading { font-family:'Noto Sans JP',sans-serif; font-size:15px; font-weight:300; letter-spacing:0.52em; white-space:nowrap; background:linear-gradient(to right, #a09890 0%, #b87060 40%, #c87560 70%, #8b1a10 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .hero-divider { width:1px; height:32px; background:#e0ddd8; margin:0 auto 28px; }
 .hero-catch { font-size:14px; color:#666; line-height:2.6; margin-bottom:36px; letter-spacing:0.04em; }
 .hero-catch em { font-style:normal; color:#2a2520; }
@@ -31,14 +31,20 @@ body { background:#fafafa; color:#2a2520; font-family:'Noto Serif JP',serif; fon
 .merit-item { background:#fafafa; padding:24px 20px; display:grid; grid-template-columns:24px 1fr; gap:14px; }
 .merit-num { font-family:'Cormorant Garamond',serif; font-size:20px; color:#c87560; font-weight:300; line-height:1; padding-top:2px; }
 .merit-title { font-size:14px; color:#2a2520; margin-bottom:8px; letter-spacing:0.04em; font-weight:400; }
-.merit-body { font-size:13px; color:#999; line-height:2.2; }
+.merit-body { font-size:13px; color:#666; line-height:2.2; }
 table { width:100%; border-collapse:collapse; }
 thead tr { border-bottom:1px solid #e0ddd8; }
-th { font-family:'Noto Sans JP',sans-serif; font-size:10px; letter-spacing:0.2em; color:#ccc; font-weight:300; padding:10px 8px; text-align:left; }
-td { font-size:13px; color:#555; padding:14px 8px; border-bottom:1px solid #f0ede8; vertical-align:middle; }
+th { font-family:'Noto Sans JP',sans-serif; font-size:10px; letter-spacing:0.2em; color:#888; font-weight:400; padding:10px 8px; text-align:left; }
+td { font-size:13px; color:#444; padding:14px 8px; border-bottom:1px solid #f0ede8; vertical-align:middle; }
 td.time { color:#c87560; font-size:12px; white-space:nowrap; font-family:'Noto Sans JP',sans-serif; font-weight:300; }
-td.no { color:#ccc; font-size:11px; width:24px; font-family:'Noto Sans JP',sans-serif; }
-tr.adj-row td { color:#ccc; }
+td.no { color:#aaa; font-size:11px; width:24px; font-family:'Noto Sans JP',sans-serif; }
+tr.adj-row td { color:#aaa; }
+.ticket-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:#ede9e4; border:1px solid #ede9e4; }
+.ticket-cell { background:#fafafa; padding:24px 20px; }
+.ticket-type { font-family:'Noto Sans JP',sans-serif; font-size:10px; letter-spacing:0.2em; color:#ccc; margin-bottom:8px; font-weight:300; }
+.ticket-price { font-family:'Cormorant Garamond',serif; font-size:32px; color:#2a2520; font-weight:300; }
+.ticket-price span { font-size:12px; color:#bbb; margin-left:4px; }
+.ticket-note { font-family:'Noto Sans JP',sans-serif; font-size:11px; color:#bbb; margin-top:16px; line-height:1.8; }
 .condition-row { display:flex; gap:24px; border-bottom:1px solid #f0ede8; padding:16px 0; align-items:baseline; }
 .condition-row:last-child { border-bottom:none; }
 .condition-key { font-family:'Noto Sans JP',sans-serif; font-size:11px; letter-spacing:0.15em; color:#bbb; min-width:90px; flex-shrink:0; font-weight:300; }
@@ -60,21 +66,21 @@ footer { text-align:center; padding:28px 24px; border-top:1px solid #ede9e4; fon
   </div>
   <div class="hero-divider"></div>
   <p class="hero-catch">
-    言葉に重心を置くグループが、本物の音響で熱を届ける場所。<br>
-    <em>一夜限りのライブを、検索され続けるコンテンツに変える。</em>
+    温熱系グループのみが集まる一夜。<br>
+    <em>メンバーフィーチャー型取材を決行。</em>
   </p>
   <div class="hero-meta">
     <div class="hero-meta-item">
       <p class="hero-meta-label">DATE</p>
-      <p class="hero-meta-value">2026.11.01 SUN</p>
+      <p class="hero-meta-value">2026.11.06 FRI</p>
     </div>
     <div class="hero-meta-item">
       <p class="hero-meta-label">VENUE</p>
-      <p class="hero-meta-value">KMAパラダイスホール</p>
+      <p class="hero-meta-value">浅草花劇場</p>
     </div>
     <div class="hero-meta-item">
       <p class="hero-meta-label">CAPACITY</p>
-      <p class="hero-meta-value">300</p>
+      <p class="hero-meta-value">450</p>
     </div>
   </div>
 </section>
@@ -84,19 +90,19 @@ footer { text-align:center; padding:28px 24px; border-top:1px solid #ede9e4; fon
   <div class="overview-grid">
     <div class="overview-cell">
       <p class="overview-cell-label">日時</p>
-      <p class="overview-cell-value">2026年11月1日（日）</p>
+      <p class="overview-cell-value">2026年11月6日（金）</p>
     </div>
     <div class="overview-cell">
       <p class="overview-cell-label">会場</p>
-      <p class="overview-cell-value">KMAパラダイスホール<br><span style="font-size:12px;color:#bbb;">旧フォーライフライブホール</span></p>
+      <p class="overview-cell-value">浅草花劇場<br><span style="font-size:12px;color:#bbb;">東京都台東区浅草2-28-1 浅草花やしき内</span></p>
     </div>
     <div class="overview-cell">
       <p class="overview-cell-label">アクセス</p>
-      <p class="overview-cell-value">池尻大橋駅 徒歩7分<br>三軒茶屋駅 徒歩9分</p>
+      <p class="overview-cell-value">TX「浅草」駅 徒歩5分<br>地下鉄「浅草」駅 徒歩10分</p>
     </div>
     <div class="overview-cell">
       <p class="overview-cell-label">キャパシティ</p>
-      <p class="overview-cell-value">300人</p>
+      <p class="overview-cell-value">450人（スタンディング）</p>
     </div>
     <div class="overview-cell">
       <p class="overview-cell-label">主催</p>
@@ -104,34 +110,33 @@ footer { text-align:center; padding:28px 24px; border-top:1px solid #ede9e4; fon
     </div>
     <div class="overview-cell">
       <p class="overview-cell-label">出演</p>
-      <p class="overview-cell-value">約7組（予定）</p>
+      <p class="overview-cell-value">7組</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <p class="section-label">Merit</p>
-  <p class="section-title">出演メリット</p>
+  <p class="section-label">特徴</p>
   <div class="merit-list">
     <div class="merit-item">
       <p class="merit-num">I</p>
       <div>
-        <p class="merit-title">都内有数の音響設備</p>
-        <p class="merit-body">天井高8m、L-Acoustics A15を中心としたシステムを備えています。照明も含め、パフォーマンスをしっかり届けられる環境です。</p>
+        <p class="merit-title">出演グループのコンセプト統一</p>
+        <p class="merit-body">温熱系グループのみをキャスティング。同じ感度を持つファンと、あらたな出会いを創出。</p>
       </div>
     </div>
     <div class="merit-item">
       <p class="merit-num">II</p>
       <div>
-        <p class="merit-title">参加するだけでWEBコンテンツ化</p>
-        <p class="merit-body">POETRY ONのライター・フォトグラファーが当日の取材を行い、WEBメディアに掲載します。開催後も露出が続くため、ライブが検索され続けるコンテンツに変化します。</p>
+        <p class="merit-title">参加するだけでWEB資産化</p>
+        <p class="merit-body">フォトグラファーが会場内でポートレート撮影。取材記事としてWEBメディアに掲載。参加で終わらず、検索され続けるコンテンツへ。</p>
       </div>
     </div>
     <div class="merit-item">
       <p class="merit-num">III</p>
       <div>
-        <p class="merit-title">出演グループのコンセプト統一</p>
-        <p class="merit-body">エモーショナルな気質を持つグループのみをキャスティング。顧客の属性も揃いやすく、盛り上がりとともに新たな出会いを創出します。</p>
+        <p class="merit-title">異質な舞台</p>
+        <p class="merit-body">浅草、遊園地の中にある劇場。横並びでない立地が、SNS素材に彩りを加える。</p>
       </div>
     </div>
   </div>
@@ -141,25 +146,35 @@ footer { text-align:center; padding:28px 24px; border-top:1px solid #ede9e4; fon
   <p class="section-label">Timetable</p>
   <table>
     <thead>
-      <tr><th>No.</th><th>ライブ</th><th>出演者</th><th>特典会</th><th>ブース</th></tr>
+      <tr><th>No.</th><th>ライブ</th><th>出演者</th><th>特典会</th></tr>
     </thead>
     <tbody>
-      <tr><td class="no">1</td><td class="time">16:50 〜 17:20</td><td>—</td><td class="time">17:25 〜 18:25</td><td>A</td></tr>
-      <tr><td class="no">2</td><td class="time">17:20 〜 17:50</td><td>—</td><td class="time">17:55 〜 18:55</td><td>B</td></tr>
-      <tr><td class="no">3</td><td class="time">17:50 〜 18:20</td><td>—</td><td class="time">18:25 〜 19:25</td><td>C</td></tr>
-      <tr class="adj-row"><td class="no">-</td><td class="time">18:20 〜 18:30</td><td>【調整】</td><td class="time">18:35 〜 19:35</td><td>-</td></tr>
-      <tr><td class="no">4</td><td class="time">18:30 〜 19:00</td><td>—</td><td class="time">19:05 〜 20:05</td><td>D</td></tr>
-      <tr><td class="no">5</td><td class="time">19:00 〜 19:30</td><td>—</td><td class="time">19:35 〜 20:35</td><td>A</td></tr>
-      <tr><td class="no">6</td><td class="time">19:30 〜 20:00</td><td>—</td><td class="time">20:05 〜 21:05</td><td>B</td></tr>
-      <tr><td class="no">7</td><td class="time">20:00 〜 20:30</td><td>—</td><td class="time">20:35 〜 21:35</td><td>C</td></tr>
+      <tr><td class="no">1</td><td class="time">17:50 〜 18:15</td><td>—</td><td>調整中（60分）</td></tr>
+      <tr><td class="no">2</td><td class="time">18:15 〜 18:40</td><td>—</td><td>調整中（60分）</td></tr>
+      <tr><td class="no">3</td><td class="time">18:40 〜 19:05</td><td>—</td><td>調整中（60分）</td></tr>
+      <tr><td class="no">4</td><td class="time">19:05 〜 19:30</td><td>—</td><td>調整中（60分）</td></tr>
+      <tr class="adj-row"><td class="no">-</td><td class="time">19:30 〜 19:35</td><td>【調整】</td><td>—</td></tr>
+      <tr><td class="no">5</td><td class="time">19:35 〜 20:00</td><td>—</td><td>調整中（60分）</td></tr>
+      <tr><td class="no">6</td><td class="time">20:00 〜 20:25</td><td>—</td><td>調整中（60分）</td></tr>
+      <tr><td class="no">7</td><td class="time">20:25 〜 20:50</td><td>—</td><td>調整中（60分）</td></tr>
     </tbody>
   </table>
-  <p style="font-family:'Noto Sans JP',sans-serif;font-size:12px;color:#aaa;margin-top:16px;letter-spacing:0.1em;font-weight:300;">OPEN / START　16:30 / 16:50</p>
+  <p style="font-family:'Noto Sans JP',sans-serif;font-size:12px;color:#aaa;margin-top:16px;letter-spacing:0.1em;font-weight:300;">OPEN / START　17:20 / 17:50</p>
 </section>
 
 <section class="section">
-  <p class="section-label">Ticket</p>
-  <p style="font-size:13px;color:#ccc;padding:12px 0;letter-spacing:0.1em;">調整中</p>
+  <p class="section-label">Ticket（調整中）</p>
+  <div class="ticket-grid">
+    <div class="ticket-cell">
+      <p class="ticket-type">前方</p>
+      <p class="ticket-price">¥4,000<span>+1D</span></p>
+    </div>
+    <div class="ticket-cell">
+      <p class="ticket-type">一般</p>
+      <p class="ticket-price">¥2,500<span>+1D</span></p>
+    </div>
+  </div>
+  <p class="ticket-note">※ドリンク代別途。詳細は決定次第更新します。</p>
 </section>
 
 <section class="section">
@@ -167,25 +182,41 @@ footer { text-align:center; padding:28px 24px; border-top:1px solid #ede9e4; fon
   <p class="section-title">出演条件</p>
   <div class="condition-row">
     <p class="condition-key">グループ</p>
-    <p class="condition-val">エモーショナルな気質のあるグループ・ユニット</p>
+    <p class="condition-val">無害な見た目をしているのに、パフォーマンスに熱量があるグループ・ユニット</p>
   </div>
   <div class="condition-row">
     <p class="condition-key">内容</p>
-    <p class="condition-val">ライブ30分 + 裏側取材 + 特典会60分</p>
+    <p class="condition-val">ライブ25分 + 特典会60分</p>
   </div>
   <div class="condition-row">
-    <p class="condition-key">掲載許諾</p>
-    <p class="condition-val">写真・テキストの編集・掲載にご同意いただけること<br><span style="font-size:12px;color:#bbb;">※個別相談可</span></p>
+    <p class="condition-key">費用</p>
+    <p class="condition-val">エントリー料/チケットノルマ：なし<br>物販手数料：¥3,300（会場規定）</p>
+  </div>
+</section>
+
+<section class="section">
+  <p class="section-label">主催</p>
+  <div class="condition-row">
+    <p class="condition-key">主催</p>
+    <p class="condition-val">
+      POETRY ON（ポエトリー・オン）<br>
+      <span style="font-size:12px;color:#c87560;">「ガールズカルチャー×新視点」メディア</span><br>
+      フォトエッセイ型インタビュー【余白に佇む人。】などのオリジナルコンテンツを展開。TIF2026出場グループ多数ピックアップ。<br>
+      <a href="https://entame01.com/" target="_blank" style="font-size:12px;color:#c87560;text-decoration:underline;letter-spacing:0.05em;">POETRY ON →</a>
+    </p>
   </div>
 </section>
 
 <div class="cta">
   <p class="cta-title">出演のご相談</p>
   <p class="cta-body">まずはお気軽にご連絡ください。<br>編成・時間割はご相談のうえ調整します。</p>
-  <a class="cta-btn">CONTACT</a>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <a class="cta-btn" href="https://line.me/ti/p/j9cPDWR1Jr" target="_blank">LINE（担当：川上）</a>
+    <a class="cta-btn" href="mailto:contact@lemocle.jp">MAIL</a>
+  </div>
 </div>
 
-<footer>POETRY ON &nbsp;/&nbsp; KOTOBA ONNETSU &nbsp;/&nbsp; 2026.11.01</footer>
+<footer>POETRY ON &nbsp;/&nbsp; KOTOBA ONNETSU &nbsp;/&nbsp; 2026.11.06</footer>
 
 </body>
 </html>
